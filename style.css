@@ -1,0 +1,61 @@
+:root{
+  --bg1:#232323;--bg2:#555;--card:#e6e6e6;--ink:#111;--ink2:#222;--white:#fff;
+  --xp:#fba72b;--nav:#000;--rim:#9e9e9e;
+  --font:"Libre Baskerville",Georgia,"Times New Roman",serif;
+  color-scheme:dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  background:#000;
+}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;height:100%;background:#000;font-family:var(--font);color:var(--white);
+  -webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+#app{max-width:480px;height:100%;margin:0 auto;display:flex;flex-direction:column;
+  background:linear-gradient(#232323,#555);overflow:hidden;position:relative}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+header{padding:14px 20px 0;flex:none}
+.coins{display:inline-flex;align-items:center;gap:10px;background:#000;border-radius:999px;padding:6px 18px 6px 8px;font-size:26px}
+.coin{width:38px;height:38px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-weight:700;font-size:24px;line-height:1}
+main{flex:1;min-height:0;overflow-y:auto;padding:16px 20px 20px}
+.screen{display:none}.screen.on{display:block}
+
+/* Forja */
+.lvl{display:flex;justify-content:space-between;align-items:flex-end;padding:0 4px;margin:6px 0 4px}
+.lvl small{font-size:15px}.lvl b{font-size:25px;font-weight:400}
+.bar{height:20px;border-radius:10px;background:#fff;overflow:hidden;margin:0 4px 20px}
+.bar i{display:block;height:100%;width:0;background:var(--xp);border-radius:10px;transition:width .12s}
+.anvil-card{position:relative;display:block;width:100%;aspect-ratio:1/1;background:var(--card);color:var(--ink);
+  border:9px solid var(--rim);border-radius:20px;box-shadow:0 4px 8px #0006;overflow:hidden;transition:border-color .3s}
+.anvil-card .hint{position:absolute;top:8px;left:0;right:0;text-align:center;font-size:15px}
+.anvil-card svg{position:absolute;inset:6% 4% 0}
+.anvil-card.hit svg{animation:hit .13s}
+@keyframes hit{0%{transform:scale(1)}40%{transform:scale(.93) rotate(-2deg)}100%{transform:scale(1)}}
+.pop{position:absolute;font-weight:700;font-size:20px;color:#c2570c;pointer-events:none;animation:pop .7s forwards;text-shadow:0 1px #fff}
+@keyframes pop{to{transform:translateY(-60px);opacity:0}}
+.name{text-align:center;font-size:30px;margin:18px 0 6px}
+.badge{display:block;width:max-content;margin:0 auto;padding:1px 14px;border-radius:999px;font-size:18px;background:#999;color:#fff;transition:background .3s}
+.boosts-t{text-align:center;margin:22px 0 8px;font-size:16px}
+.slots{display:flex;gap:14px;justify-content:center}
+.slot{width:104px;height:98px;border-radius:12px;background:var(--card);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;gap:2px}
+.slot span{font-size:32px;line-height:1}
+
+/* Lista (coleção e loja) */
+.item{display:flex;align-items:center;gap:14px;background:var(--card);color:var(--ink);border:9px solid var(--rim);border-radius:20px;padding:12px 14px;margin-bottom:20px;box-shadow:0 3px 6px #0005}
+.item svg{width:84px;height:84px;flex:none}
+.item h3{margin:0 0 8px;font-weight:400;font-size:20px}
+.item p{margin:0;font-size:13px;line-height:1.3;color:#000}
+.item .grow{flex:1;min-width:0}
+.buy{background:#2e7d32;color:#fff;padding:8px 12px;border-radius:10px;font-size:14px;white-space:nowrap}
+.buy:disabled{background:#777;cursor:not-allowed}
+.ico{width:84px;height:84px;flex:none;display:grid;place-items:center;font-size:48px}
+.title{font-size:22px;margin:4px 4px 14px}
+
+nav{flex:none;display:flex;justify-content:space-around;background:var(--nav);padding:12px 0 10px}
+nav button{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:13px;width:33%;opacity:.55}
+nav button.on{opacity:1}
+nav svg{width:44px;height:36px}
+.toast{position:absolute;left:50%;top:88px;transform:translate(-50%,-20px);background:#000e;border:2px solid var(--xp);padding:10px 16px;border-radius:14px;font-size:14px;text-align:center;opacity:0;pointer-events:none;transition:.3s;z-index:5;width:max-content;max-width:90%}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){.anvil-card.hit svg,.pop{animation:none}}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Forge-Simulator</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div id="app">
+  
+    <header><div class="coins"><div class="coin">$</div><span id="coins">1000</span></div></header>
+      <div class="toast" id="toast"></div>
+        <main>
+          <section class="screen on" id="s-forja">
+            <div class="lvl"><small id="xpTxt">0/40</small><b id="lvlTxt">Nível 1</b></div>
+            <div class="bar"><i id="xpBar"></i></div>
+              <button class="anvil-card" id="anvil"><span class="hint">Toque para martelar</span><span id="mainSword"></span></button>
+            <div class="name" id="swName">Espada de Cobre</div>
+              <span class="badge" id="swRar">Comum</span>
+            <div class="boosts-t">Boosts</div>
+            <div class="slots" id="slots"></div>
+          </section>
+          <section class="screen" id="s-loja">
+            <div class="title">Loja de boosts</div>
+            <div id="shop"></div>
+          </section>
+          <section class="screen" id="s-colecao">
+            <div class="title" id="colTitle">Coleção</div>
+            <div id="list"></div>
+          </section>
+        </main>
+  <nav id="nav">
+    <button class="on" data-s="forja"><svg viewBox="0 0 48 36" fill="#fff"><path d="M2 3h31c0 6 6 9 13 9v4H31c-3 4-3 7 0 10h5v6H12v-6h5c3-3 3-6 0-10C9 14 4 9 2 3z"/></svg>Forja</button>
+    <button data-s="loja"><svg viewBox="0 0 48 36"><circle cx="24" cy="18" r="17" fill="#fff"/><text x="24" y="27" text-anchor="middle" font-size="26" font-weight="700" font-family="Georgia,serif" fill="#000">$</text></svg>Loja</button>
+    <button data-s="colecao"><svg viewBox="0 0 48 36" fill="none" stroke="#fff" stroke-width="3"><rect x="5" y="3" width="38" height="30"/><path d="M5 14h38M17 3v11M31 3v11M18 22h12v6H18z"/></svg>Coleção</button>
+  </nav>
+  <script src="script.js"></script>
+</div>
+</body>
+</html>
