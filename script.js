@@ -4,9 +4,9 @@ const SW=[
  {n:"Espada de Ferro",r:1,d:20,u:9,c:["#e4e4e4","#8d9199","#4a3b2a"]},
  {n:"Espada de Aço",r:1,d:28,u:12,c:["#d3e6f7","#7f9bb5","#33404d"]},
  {n:"Espada de Prata",r:2,d:40,u:16,c:["#ffffff","#b9c4d0","#2f5f9e"]},
- {n:"Espada de Mithril",r:2,d:55,u:20,c:["#c8fbff","#4fc3d9","#1b5f77"]},
- {n:"Espada Rúnica",r:3,d:75,u:26,c:["#e8c9ff","#9b59d6","#4a1d78"]},
- {n:"Espada do Dragão",r:4,d:120,u:40,c:["#ffe28a","#f5a623","#a02d0f"]}
+ {n:"Espada de Diamante",r:2,d:55,u:20,c:["#c8fbff","#4fc3d9","#1b5f77"]},
+ {n:"Espada Obsidiana",r:3,d:75,u:26,c:["#e8c9ff","#9b59d6","#4a1d78"]},
+ {n:"Espada do Sol",r:4,d:120,u:40,c:["#ffe28a","#f5a623","#a02d0f"]}
 ];
 const BOOSTS=[
  {k:"power",n:"Martelo reforçado",i:"wip",d:"+1 de força por toque",base:150,max:10},
